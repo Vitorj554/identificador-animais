@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Identifique animais por imagem ou nome usando IA e Wikipedia">
+    <title>Identificador de Animais</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Identificador de Animais</h1>
+
+    <div class="container">
+        <h2>Buscar Animal</h2>
+        <div class="input-group">
+            <input type="text" id="searchInput" placeholder="Digite o nome do animal..." aria-label="Nome do animal">
+        </div>
+        
+        <div class="input-group">
+            <label for="imageInput" class="file-input-label">
+                <span id="fileLabelText">Selecionar Imagem</span>
+                <input type="file" id="imageInput" accept="image/*" aria-label="Enviar imagem do animal">
+            </label>
+        </div>
+        
+        <button id="searchButton">Buscar</button>
+    </div>
+
+    <div class="container">
+        <h2>Resultado</h2>
+        <div id="resultado" aria-live="polite"></div>
+    </div>
+</body>
+</html>
